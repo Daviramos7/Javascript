@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de país</title>
+</head>
+
+<body>
+
+    <h1>Sistema Verificador de Estrangeiros</h1>
+    Qual é o seu país? <input type="text" name="txtp" id="txtp">z
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var txtp = document.getElementById('txtp').value;
+            var res = document.getElementById('res');
+            res.innerHTML = "<p>Você disse que nasceu no <strong>" + txtp + "</strong>.</p>";
+
+            if (txtp.toLowerCase() === "brasil") {
+                res.innerHTML += "<p>Você é Brasileiro!</p>";
+            } 
+            else {
+                res.innerHTML += "<p>Você é Estrangeiro.</p>";
+            }
+        }
+    </script>
+</body>
+
+</html>
